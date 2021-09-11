@@ -55,6 +55,7 @@ $(function () {
                 $('#percentLeft').text(
                  percent + "% 지났습니다."
                 )
+                //100% 넘으면 전역한거, 0퍼 아래면 0퍼 출력하기.
             }
             calcPercent(joinYear, joinMonth, joinDate);
         }
