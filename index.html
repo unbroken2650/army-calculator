@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Army Calculator 0.1</title>
-    <script src="script.js"></script>
+    <style>
+        .Clock{
+            font-size:15px;
+            color:black;
+        }
+        #input, #testDatepicker{
+            font-size:20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script lang="javascript">
+        $(function() {
+            $("#testDatepicker").datepicker({
+                showOn: "both",
+                numberOfMonths :[1, 3]
+            })
+        })
+    </script>
 </head>
 <body>
-    
+    <h1>남은 날짜 계산기</h1>
+    <div id="divClock" class="clock"> </div>
+    <p id="input">입대일자 : <input type="text" id="testDatepicker"></p>
+    <input id="submit" type="submit" value="입력" onclick="printLeft()">
+    <div id="dischargeDay" class="clock" > </div>
 </body>
 </html>
