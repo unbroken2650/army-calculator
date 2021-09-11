@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <title>Army Calculator 0.1</title>
     <style>
-        .Clock{
-            font-size:15px;
-            color:black;
-        }
-        #input, #testDatepicker{
+        #input, #date{
             font-size:20px;
         }
     </style>
@@ -17,18 +13,59 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script lang="javascript">
         $(function() {
-            $("#testDatepicker").datepicker({
+            $("#date").datepicker({
                 showOn: "both",
-                numberOfMonths :[1, 3]
+                changeMonth : true,
+                changeYear : true,
+                prevText : "이전달",
+                nextText : "다음달",
+                closeText : "닫기",
+                showButtonPanel : true,
+                monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNamesShort : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNames : ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+                dayNamesMin : ['일', '월', '화', '수', '목', '금', '토'],
+                onSelect:function(d){
+                    var arr = d.split("/");
+                    var joinMonth = Number(arr[0]);
+                    var joinDate = Number(arr[1]);
+                    var joinYear= Number(arr[2]);
+                    if (joinMonth>=7) {
+                        joinMonth -= 6;
+                        joinYear += 2;
+                    }
+                    else {
+                        joinMonth += 6;
+                        joinYear += 1;
+                    }
+                    if (joinDate == 1) {
+                        joinMonth -= 1;
+                        switch(joinMonth) {
+                            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                            joinDate = 31;break;
+                            case 4: case 6: case 9: case 11:
+                            joinDate = 30;break;
+                            case 2:
+                            joinDate = 28;break;
+                        } //윤년 추가해야 함.
+                    }
+                    else {
+                        joinDate -= 1;
+                    }
+                    
+                    $("#dischargeDay").text(
+                        "전역일: " + joinYear + "년 " + joinMonth + "월 " + joinDate + "일"
+                    );
+                }
+
             })
         })
+
     </script>
 </head>
 <body>
-    <h1>남은 날짜 계산기</h1>
-    <div id="divClock" class="clock"> </div>
-    <p id="input">입대일자 : <input type="text" id="testDatepicker"></p>
-    <input id="submit" type="submit" value="입력" onclick="printLeft()">
-    <div id="dischargeDay" class="clock" > </div>
+    <h1>남은 날짜 계산기(육군)</h1>
+    <p id="input">입대일자 : <input type="text" id="date"></p>
+    <div id="dischargeDay" class="date"> </div>
 </body>
 </html>
