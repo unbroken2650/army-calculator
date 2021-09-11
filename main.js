@@ -50,9 +50,10 @@ $(function () {
                 diff = Math.floor(diff / (1000*60*60*24) +1);
                 var total = dateDischarge.getTime() - dateJoin.getTime();
                 total = Math.floor(total / (1000*60*60*24) +1);
-                console.log(total);
+                
+                var percent = parseInt(diff/total*1000)*0.1;
                 $('#percentLeft').text(
-                 parseInt(diff/total*100) + "% 지났습니다."
+                 percent + "% 지났습니다."
                 )
             }
             calcPercent(joinYear, joinMonth, joinDate);
