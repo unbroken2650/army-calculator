@@ -35,10 +35,30 @@ $(function () {
                         dischargeTime[2] = 28; break;
                 } //윤년 추가해야 함.
             }
-            else {
-                dischargeTime[2] -= 1;
-            }
+            else {dischargeTime[2] -= 1;}
 
+            if (dischargeTime[1]==2 && dischargeTime[2]==29) {
+                if (dischargeTime[0] %4 ==0) {
+                    if (dischargeTime[0] %100 ==0) {
+                        if (dischargeTime[0] %400 !=0) {
+                            dischargeTime[1] = 3;dischargeTime[2] = 1;
+                        }
+                    }
+                }
+                else {dischargeTime[1] = 3;dischargeTime[2] = 1;}
+            }
+            if (dischargeTime[1]==2 && dischargeTime[2]==30) {
+               if (dischargeTime[0] %4 ==0) {
+                    if (dischargeTime[0] %100 ==0) {
+                        if (dischargeTime[0] %400 !=0) {
+                            dischargeTime[2] = 2;
+                        }
+                    }
+                    else {dischargeTime[2] = 1;}
+                }
+                else {dischargeTime[2] = 2;} 
+                dischargeTime[1] = 3;
+            }
             $("#dischargeDay").text(
                 "전역일: " + dischargeTime[0] + "년 " + dischargeTime[1] + "월 " + dischargeTime[2] + "일"
             );
@@ -68,6 +88,3 @@ $(function () {
     })
 })
 
-
-
-    
