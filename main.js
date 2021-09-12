@@ -50,12 +50,18 @@ $(function () {
                 diff = Math.floor(diff / (1000*60*60*24) +1);
                 var total = dateDischarge.getTime() - dateJoin.getTime();
                 total = Math.floor(total / (1000*60*60*24) +1);
+                var percent = (diff/total*100).toFixed(1);                
                 
-                var percent = parseInt(diff/total*1000)*0.1;
-                $('#percentLeft').text(
-                 percent + "% 지났습니다."
-                )
-                //100% 넘으면 전역한거, 0퍼 아래면 0퍼 출력하기.
+                if (percent<=0) {
+                    $('#percentLeft').text("입대 이전입니다.");
+                }
+                else if (percent >100) {
+                    $('#percentLeft').text("전역을 축하드립니다.");
+                }
+                else {
+                    $('#percentLeft').text(percent + "% 지났습니다.");
+                }
+                
             }
             calcPercent(joinYear, joinMonth, joinDate);
         }
