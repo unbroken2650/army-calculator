@@ -1,14 +1,26 @@
 * {
   font-family: "Yeon Sung", sans-serif;
 }
+html {
+    margin-top:20%;
+    margin-bottom:20%;
+    margin-left:5%;
+    margin-right:5%;
+}
 .title {
-  margin-top: 20%;
+  margin:5%;
+  font-size: 7vw;
+}
+p {
+    margin:5%;
+}
+p, input, .date, .percent{
   font-size: 5vw;
 }
-#input,
-#date {
+/*datepicker*/
+button{
   font-size: 3vw;
 }
-#button{
-  size: 30;
+ui-widget-content{
+    position: relative;
 }
