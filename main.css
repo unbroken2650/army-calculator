@@ -1,3 +1,14 @@
-#input, #date{
-            font-size:20px;
-        }
+* {
+  font-family: "Yeon Sung", sans-serif;
+}
+.title {
+  margin-top: 20,
+  font-size: 5vw;
+}
+#input,
+#date {
+  font-size: 3vw;
+}
+#button{
+  
+}
