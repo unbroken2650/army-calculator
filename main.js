@@ -1,15 +1,22 @@
 $(function () {
+    var dateCurrent = new Date();
     $("#date").datepicker({
-        showOn: "both",
         dateFormat: "yy/mm/dd",
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showOn: "both",
         changeMonth: true,
         changeYear: true,
+        showMonthAfterYear: true,
+        buttonText: "클릭",
         prevText: "이전달",
         nextText: "다음달",
         closeText: "닫기",
+        currentText: "오늘",
+        autoSize: false,
+        showAnim: "slideDown",
         showButtonPanel: true,
-        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        yearRange: (dateCurrent.getFullYear() - 2) + ":" + (dateCurrent.getFullYear() + 2),
         onSelect: function (d) {
             var joinTime = d.split("/");
             var joinYear = Number(joinTime[0]);
@@ -84,7 +91,6 @@ $(function () {
                 
             }
             calcPercent(joinYear, joinMonth, joinDate);
-        }
+        },
     })
 })
-
