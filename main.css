@@ -2,14 +2,28 @@
   font-family: "Yeon Sung", sans-serif;
 }
 html {
-    margin-top:20%;
-    margin-bottom:20%;
-    margin-left:5%;
-    margin-right:5%;
+    margin:auto;
+    margin-top:10%;
+    padding:auto;
+}
+center {
+    margin:auto;
+    padding:auto;
 }
 .title {
   margin:5%;
   font-size: 7vw;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    display: inline;
+}
+a:link, a:visited { /*누르기 전, 누른 후*/
+    color: #000;
+}
+a:hover, a:active { /*마우스 올리기, 클릭*/
+    color: green;
 }
 p {
     margin:5%;
