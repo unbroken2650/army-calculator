@@ -1,3 +1,12 @@
+designed by [@iammworthitt](https://www.instagram.com/iammworthitt/)
+
+## calculator.html  
+가운데 정렬
+![calculator_center](calculator_center.jpg)
+좌우로 나누기
+![calculator_left](calculator_left.jpg)
+
+
 배경 #fefefe
 글씨 #919191
 연월일 박스 #ffffff
