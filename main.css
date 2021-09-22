@@ -12,17 +12,31 @@
 }
 html {
     margin:auto;
-    margin-top:15%;
+    margin-top:10%;
     padding:auto;
+    background-color: #fefefe;
 }
-
 .title {
-  margin:5%;
+  margin:3%;
   font-size: 6vw;
   font-weight: bold;
+  color: #919191;
+  
+}
+a:link, a:visited { /*누르기 전, 누른 후*/
+    color: #919191;
+}
+a:hover, a:active { /*마우스 올리기, 클릭*/
+    color : #47E6A1;
+}
+.subtitle {
+  margin:1%;
+  font-size: 3vw;
+  font-weight: normal;
+  color: #AEAEAE;
 }
 .half{
-    margin:0%;
+    margin:3%;
     width:80%;
 }
 a {
@@ -30,15 +44,21 @@ a {
     text-align: center;
     display: inline;
 }
-a:link, a:visited { /*누르기 전, 누른 후*/
-    color: #000;
-}
-a:hover, a:active { /*마우스 올리기, 클릭*/
-    color: green;
+p, input, button, .date, .percent{
+  font-size: 4vw;
 }
 p {
     margin:0;
+    color: #919191;
 }
-p, input, button, .date, .percent{
-  font-size: 4vw;
+input {
+    border-color: rgba(145, 145, 145, 0.66);
+    border-radius: 2vw;
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
+}
+button{
+    border-color: rgba(145, 145, 145, 0.66);
+    border-radius: 2vw;
 }
