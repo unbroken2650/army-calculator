@@ -1,23 +1,44 @@
-* {
-  font-family: "Yeon Sung", sans-serif;
+@font-face{
+    font-family: 'NanumSquare';
+    src: url('fonts/NanumSquareL.ttf');
+}
+@font-face{
+    font-family: 'NanumSquare';
+    src: url('fonts/NanumSquareEB.ttf');
+    font-weight:bold;
+}
+*{
+    font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
 }
 html {
-    margin-top:20%;
-    margin-bottom:20%;
-    margin-left:5%;
-    margin-right:5%;
+    margin:auto;
+    margin-top:15%;
+    padding:auto;
 }
+
 .title {
   margin:5%;
-  font-size: 7vw;
+  font-size: 6vw;
+  font-weight: bold;
+}
+.half{
+    margin:0%;
+    width:80%;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    display: inline;
+}
+a:link, a:visited { /*누르기 전, 누른 후*/
+    color: #000;
+}
+a:hover, a:active { /*마우스 올리기, 클릭*/
+    color: green;
 }
 p {
-    margin:5%;
+    margin:0;
 }
-p, input, .date, .percent{
-  font-size: 5vw;
-}
-/*datepicker*/
-button{
-  font-size: 3vw;
+p, input, button, .date, .percent{
+  font-size: 4vw;
 }
