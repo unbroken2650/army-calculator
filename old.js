@@ -1,3 +1,4 @@
+//datepicker 라이브러리 사용
 $(function () {
     var dateCurrent = new Date();
     $("#date").datepicker({
