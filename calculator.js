@@ -1,9 +1,7 @@
 function calc() {
-    var date = $('#buttonInputDate').val();
-    var joinDateString = date.split('-');
-    var joinYear = Number(joinDateString[0]);
-    var joinMonth = Number(joinDateString[1]);
-    var joinDay = Number(joinDateString[2]);
+    var joinYear = Number($('#inputYear').val());
+    var joinMonth = Number($('#inputMonth').val());
+    var joinDay = Number($('#inputDay').val());
     if (joinYear == "" || joinMonth == "" || joinDay == "") {
         alert("날짜를 정확히 선택해주세요.");
         return;
@@ -59,14 +57,13 @@ function calc() {
     }
 
     var dischargeDate = new Date(joinYear, joinMonth-1, joinDay);
-    $("#dischargeDay").html("전역일 : " + dischargeDate.getFullYear() + "년 " + Number(dischargeDate.getMonth()+1) + "월 " + dischargeDate.getDate() + "일 ");
+    $("#dischargeDay").html("<p>예상 전역일은 <b>" + dischargeDate.getFullYear() + "년 " + Number(dischargeDate.getMonth()+1) + "월 " + dischargeDate.getDate() + "일</b>이네요!</p>");
     var currentDate = new Date();
     var totalDays = parseInt((dischargeDate.getTime() - joinDate.getTime())/(1000*60*60*24));
     var leftDays = parseInt((dischargeDate.getTime() - currentDate.getTime())/(1000*60*60*24));
-    console.log(totalDays, leftDays);
     var leftPercent = parseInt((totalDays - leftDays)/totalDays*10000)/100;
-    if (leftPercent >= 100) {$("#percentLeft").html("전역을 축하드립니다!");}
-    else if (leftPercent < 0) {$("#percentLeft").html("입대 이전입니다.");}
-    else {$("#percentLeft").html(leftPercent + "% 지났습니다.");}
+    if (leftPercent >= 100) {$("#percentLeft").html("<p>전역을 축하드립니다!</p>");}
+    else if (leftPercent < 0) {$("#percentLeft").html("<p>입대 이전입니다.</p>");}
+    else {$("#percentLeft").html("<p>오늘을 기준으로 "+leftPercent + "% 지났습니다.</p>");}
 
 }
