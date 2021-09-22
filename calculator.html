@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Army Calculator 0.1</title>
+	<script src="jquery/jquery-1.12.4.js"></script>
+	<script src="jquery/jquery-ui.js"></script>
+	<script src="main.js"></script>
+	<script src="calculator.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="jquery/jquery-ui.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<center>
+		<div id="main">
+			<div id="title">
+				<h1 class="title">남은 날짜 계산기(육군)</h1>
+			</div>
+			<div id="input" class="half">
+				<table>
+					<tr>
+						<td>
+							<p>입대일자 : <input type="date" id='buttonInputDate' class="date" min="2000-01-01" max="2100-01-01" value="2001-01-01" required></p></td>
+                        <script>
+                            d = new Date();
+                            document.getElementById('buttonInputDate').value = d.toISOString().substring(0, 10);
+                        </script>
+                        <td><button onclick="calc()">입력!</button></td>
+                </tr></table>
+            </div>
+            
+            <div class="half">
+                <div id="dischargeDay" class="date"> </div>
+                <div id="percentLeft" class="percent"> </div>
+            </div>
+        </div>
+    </div>
+    </center>
+	
+</body>
+
+</html>
