@@ -11,9 +11,8 @@
     font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
 }
 html {
-    margin:auto;
-    margin-top:10%;
-    padding:auto;
+    margin: 10%;
+
     background-color: #fefefe;
 }
 .title {
@@ -22,10 +21,10 @@ html {
   width:100%;
   font-weight: bold;
   color: #919191;
-  
 }
-#main{
-    font-size:200%;
+main{
+    text-align: center;
+    padding:15px;
 }
 a:link, a:visited { /*누르기 전, 누른 후*/
     color: #919191;
@@ -34,14 +33,15 @@ a:hover, a:active { /*마우스 올리기, 클릭*/
     color : #47E6A1;
 }
 .subtitle {
-  margin:1%;
+  margin:2%;
   font-size: 3vw;
   font-weight: normal;
   color: #AEAEAE;
 }
-.half{
-    margin:3%;
-    width:80%;
+table{
+    width:60%;
+    margin:auto;
+    text-align: center;
 }
 a {
     text-decoration: none;
