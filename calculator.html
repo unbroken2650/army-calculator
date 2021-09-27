@@ -39,10 +39,9 @@
                     <td><button onclick="calc()">GO</button></td>
                     <script>
                         d = new Date();
-                        console.log(d.toISOString());
-                        document.getElementById('inputYear').value = Number(d.toISOString().substring(0, 4));
-                        document.getElementById('inputMonth').value = Number(d.toISOString().substring(5, 7));
-                        document.getElementById('inputDay').value = Number(d.toISOString().substring(9, 10));
+                        document.getElementById('inputYear').value = Number(d.getFullYear());
+                        document.getElementById('inputMonth').value = Number(d.getMonth()+1);
+                        document.getElementById('inputDay').value = Number(d.getDate());
                     </script>
             </tr></table>
     </div>
