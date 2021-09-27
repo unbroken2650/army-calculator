@@ -12,11 +12,13 @@
 }
 html {
     margin: 10%;
+
     background-color: #fefefe;
 }
 .title {
   margin:3%;
   font-size: 6vw;
+  width:100%;
   font-weight: bold;
   color: #919191;
 }
