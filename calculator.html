@@ -4,18 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Army Calculator 0.1</title>
-	<script src="jquery/jquery-1.12.4.js">
-
-	</script>
-	<script src="jquery/jquery-ui.js">
-
-	</script>
-	<script src="main.js">
-
-	</script>
-	<script src="calculator.js">
-
-	</script>
+	<script src="jquery/jquery-1.12.4.js"></script>
+	<script src="jquery/jquery-ui.js"></script>
+	<script src="main.js"></script>
+	<script src="calculator.js"></script>
 	<link rel="stylesheet" href="main.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,36 +15,26 @@
 </head>
 
 <body>
-    <main>
-        <div id="title">
-        <h1 class="title">날짜 계산기_육군 ver</h1>
-    </div>
+    <div id="title">
+    <h1 class="title">날짜 계산기_육군 ver</h1></div>
     <div>
         <h2 class="subtitle">입대(예정)일자를 입력해주세요 :)</h2>
     </div>
     <div id="input">
-        <table>
-            <tr>
-                <td><input type="number" id='inputYear' class="date" min="2000" max="2100" value="2001" required></td>
-                    <td><input type="number" id='inputMonth' class="date" min="01" max="12" value="01" required></td>
-                    <td><input type="number" id='inputDay' class="date" min="01" max="31" value="16" required></td>
-                    <td><button onclick="calc()">GO</button></td>
-                    <script>
-                        d = new Date();
-                        console.log(d.toISOString());
-                        document.getElementById('inputYear').value = Number(d.toISOString().substring(0, 4));
-                        document.getElementById('inputMonth').value = Number(d.toISOString().substring(5, 7));
-                        document.getElementById('inputDay').value = Number(d.toISOString().substring(9, 10));
-                    </script>
-            </tr></table>
+        <input type="number" id='inputYear' class="date" min="2000" max="2100" value="2001" required>
+        <input type="number" id='inputMonth' class="date" min="01" max="12" value="01" required>
+        <input type="number" id='inputDay' class="date" min="01" max="31" value="16" required>
+        <button onclick="calc()">GO</button>
+        <script>
+            d = new Date();
+            console.log(d.toISOString());
+            document.getElementById('inputYear').value = Number(d.toISOString().substring(0, 4));
+            document.getElementById('inputMonth').value = Number(d.toISOString().substring(5, 7));
+            document.getElementById('inputDay').value = Number(d.toISOString().substring(9, 10));
+        </script>
     </div>
-    <table>
-        <td>
-            <tr><div id="dischargeDay" class="date"> </div></tr>
-            <tr><div id="percentLeft" class="percent"> </div></tr>
-        </td>
-    </table>
-    </main>
+    <div id="dischargeDay" class="date"> </div>
+    <div id="percentLeft" class="percent"> </div>
 </body>
 
 </html>
