@@ -27,7 +27,6 @@
         <button onclick="calc()">GO</button>
         <script>
             d = new Date();
-            console.log(d.toISOString());
             document.getElementById('inputYear').value = Number(d.toISOString().substring(0, 4));
             document.getElementById('inputMonth').value = Number(d.toISOString().substring(5, 7));
             document.getElementById('inputDay').value = Number(d.toISOString().substring(9, 10));
