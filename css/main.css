@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'NanumSquare';
+	src: url('/fonts/NanumSquareL.ttf');
+}
+
+@font-face {
+	font-family: 'NanumSquare';
+	src: url('/fonts/NanumSquareEB.ttf');
+	font-weight: bold;
+}
+
+* {
+	font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
+}
+
+html {
+	margin: 10%;
+	background-color: #fefefe;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+	margin: 3%;
+	width: 100%;
+	justify-content: center;
+  align-items: center;
+	
+}
+
+.titleText {
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  color: #919191;
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+	display: inline;
+}
+
+a:link,
+a:visited {
+	/*누르기 전, 누른 후*/
+	color: #919191;
+}
+
+a:hover,
+a:active {
+	/*마우스 올리기, 클릭*/
+	color: #47E6A1;
+}

@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'NanumSquare';
-	src: url('fonts/NanumSquareL.ttf');
+	src: url('/fonts/NanumSquareL.ttf');
 }
 
 @font-face {
 	font-family: 'NanumSquare';
-	src: url('fonts/NanumSquareEB.ttf');
+	src: url('/fonts/NanumSquareEB.ttf');
 	font-weight: bold;
 }
 
@@ -14,21 +14,32 @@
 }
 
 html {
-	margin: 10%;
+	margin: 5%;
 	background-color: #fefefe;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main > h1, h2, div.inputForm, p{
+  padding:1%;
+  margin: 1vw;
 }
 
 .title {
 	margin: 3%;
-	font-size: 6vw;
 	width: 100%;
-	font-weight: bold;
-	color: #919191;
+	justify-content: center;
+	
 }
 
-main {
-	text-align: center;
-	padding: 15px;
+.titleText {
+  font-size: 5vw;
+  font-weight: bold;
+  color: #919191;
 }
 
 a {
@@ -50,23 +61,12 @@ a:active {
 }
 
 .subtitle {
-	margin: 2%;
-	font-size: 3vw;
+	font-size: 2.8vw;
 	font-weight: normal;
 	color: #AEAEAE;
 }
 
-table {
-	width: 60%;
-	margin: auto;
-	text-align: center;
-}
-
-p,
-input,
-button,
-.date,
-.percent {
+p, input, button, .date, .percent {
 	font-size: 4vw;
 }
 
@@ -75,15 +75,27 @@ p {
 	color: #919191;
 }
 
-input {
+.inputForm {
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
+}
+
+.inputForm > input {
+  margin: 1vw;
+}
+
+.date {
 	border-color: rgba(145, 145, 145, 0.66);
 	border-radius: 2vw;
-	text-align: center;
 	padding: 1%;
-	margin: 1%;
 }
 
 button {
 	border-color: rgba(145, 145, 145, 0.66);
 	border-radius: 2vw;
+}
+
+#dischargeDay > p, #percentLeft > p{
+  font-size: 2rem;
 }

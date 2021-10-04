@@ -6,34 +6,34 @@
 	<title>Army Calculator 0.1</title>
 	<script src="jquery/jquery-1.12.4.js"></script>
 	<script src="jquery/jquery-ui.js"></script>
-	<script src="main.js"></script>
-	<script src="calculator.js"></script>
-	<link rel="stylesheet" href="main.css">
+	<script src="js/main.js"></script>
+	<script src="js/calculator.js"></script>
+	<link rel="stylesheet" href="css/detail.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="title">
-    <h1 class="title">날짜 계산기_육군 ver</h1></div>
-    <div>
-        <h2 class="subtitle">입대(예정)일자를 입력해주세요 :)</h2>
-    </div>
-    <div id="input">
-        <input type="number" id='inputYear' class="date" min="2000" max="2100" value="2001" required>
-        <input type="number" id='inputMonth' class="date" min="01" max="12" value="01" required>
-        <input type="number" id='inputDay' class="date" min="01" max="31" value="16" required>
-        <button onclick="calc()">GO</button>
-        <script>
-            d = new Date();
-            document.getElementById('inputYear').value = Number(d.toISOString().substring(0, 4));
-            document.getElementById('inputMonth').value = Number(d.toISOString().substring(5, 7));
-            document.getElementById('inputDay').value = Number(d.toISOString().substring(9, 10));
-        </script>
-    </div>
-    <div id="dischargeDay" class="date"> </div>
-    <div id="percentLeft" class="percent"> </div>
+  <main>
+  <h1 class="titleText">날짜 계산기_육군 ver</h1>
+  <h2 class="subtitle">입대(예정)일자를 입력해주세요 :)</h2>
+  </div>
+  <div class="inputForm">
+      <input type="number" id='inputYear' class="date" min="2000" max="2100" value="2001" required>
+      <input type="number" id='inputMonth' class="date" min="01" max="12" value="01" required>
+      <input type="number" id='inputDay' class="date" min="01" max="31" value="16" required>
+      <button onclick="calc()">GO</button>
+      <script>
+          d = new Date();
+          document.getElementById('inputYear').value = Number(d.toISOString().substring(0, 4));
+          document.getElementById('inputMonth').value = Number(d.toISOString().substring(5, 7));
+          document.getElementById('inputDay').value = Number(d.toISOString().substring(9, 10));
+      </script>
+  </div>
+  <div id="dischargeDay"> </div>
+  <div id="percentLeft"> </div>
+  </main>
 </body>
 
 </html>
