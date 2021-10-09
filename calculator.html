@@ -6,12 +6,12 @@
 	<title>Army Calculator 0.1</title>
 	<script src="jquery/jquery-1.12.4.js"></script>
 	<script src="jquery/jquery-ui.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/calculator.js"></script>
 	<link rel="stylesheet" href="css/detail.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+
 </head>
 
 <body>
@@ -23,7 +23,7 @@
       <input type="number" id='inputYear' class="date" min="2000" max="2100" value="2001" required>
       <input type="number" id='inputMonth' class="date" min="01" max="12" value="01" required>
       <input type="number" id='inputDay' class="date" min="01" max="31" value="16" required>
-      <button onclick="calc()">GO</button>
+      <button id="dayinputButton" onclick="calc()">GO</button>
       <script>
           d = new Date();
           document.getElementById('inputYear').value = Number(d.toISOString().substring(0, 4));
@@ -33,7 +33,10 @@
   </div>
   <div id="dischargeDay"> </div>
   <div id="percentLeft"> </div>
+  <div id="salaryLeft"> </div>
   </main>
+  <script src="js/main.js"></script>
+	<script src="js/calculator.js"></script>
 </body>
 
 </html>
