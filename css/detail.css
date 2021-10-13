@@ -1,0 +1,97 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+* {
+	font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
+}
+
+html {
+	margin: 5%;
+	background-color: #fefefe;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main > h1, h2, div.inputForm, p{
+  padding:1rem;
+  margin: 1vw;
+}
+
+.title {
+	margin: 3%;
+	width: 100%;
+	justify-content: center;
+	font-weight: 800;
+}
+
+.titleText {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #919191;
+  
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+	display: inline;
+}
+
+a:link,
+a:visited {
+	/*누르기 전, 누른 후*/
+	color: #919191;
+}
+
+a:hover,
+a:active {
+	/*마우스 올리기, 클릭*/
+	color: #47E6A1;
+}
+
+.subtitle {
+	font-size: 2rem;
+	font-weight: 300;
+	color: #AEAEAE;
+}
+
+p, input, button, .date, .percent {
+	font-size: 2rem;
+}
+
+p {
+	margin: 0;
+	color: #919191;
+}
+
+.inputForm {
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputForm > input {
+  margin: 1vw;
+  color: #AAAAAA;
+  text-align: center;
+  border-color: rgba(199, 199, 199, 0.66);
+	border-radius: 2vw;
+	padding: 1%;
+  height: 2rem;
+  width: 7rem;
+}
+
+button {
+	border-color: rgba(145, 145, 145, 0.66);
+	border-radius: 2vw;
+  height: 3rem;
+}
+
+#dischargeDay > p, #percentLeft > p, #salaryLeft > p{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
