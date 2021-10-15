@@ -14,7 +14,6 @@
 }
 
 html {
-	margin: 10%;
 	background-color: #fefefe;
 }
 
@@ -23,12 +22,32 @@ body {
   flex-direction: column;
 }
 
-.title {
-	margin: 3%;
-	width: 100%;
+header{
+  display: flex;
+}
+
+nav {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin: 2%;
+  padding: 2px;
+  border: 2px solid rgba(145, 145, 145, 0.4);
+  background-color: rgba(145, 145, 145, 0.05);
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.logo {
+	margin: 2%; 
+	width: auto;
 	justify-content: center;
   align-items: center;
-	
+	font-weight: 800;
+  left:1%;
+  top:1%;
 }
 
 .titleText {
