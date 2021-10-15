@@ -5,18 +5,18 @@
 }
 
 html {
-	margin: 5%;
 	background-color: #fefefe;
 }
 
 main {
+  margin:3%;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
 main > h1, h2, div.inputForm, p{
-  padding:1rem;
+  padding:0.5rem;
   margin: 1vw;
 }
 
@@ -40,10 +40,18 @@ a {
 	display: inline;
 }
 
+p {
+    font-size: 1rem;
+	margin: 0;
+	color: #919191;
+}
+
+h3, h4, h5, h6 {margin:1%;}
+
 a:link,
 a:visited {
 	/*누르기 전, 누른 후*/
-	color: #919191;
+	color: #000;
 }
 
 a:hover,
@@ -57,14 +65,25 @@ a:active {
 	font-weight: 300;
 	color: #AEAEAE;
 }
-
-p, input, button, .date, .percent {
-	font-size: 2rem;
+section#groupSelection {
+    display: flex;
+    flex-direction: column;
+}
+section#groupSelection button{
+  padding: 1px;
+  margin: 0.2%;
+  
+  font-size: 1rem;
+  font-weight: 600;
+  
+  outline: 2px rgba(145, 145, 145, 0.4);
+  background-color: rgba(145, 145, 145, 0.1);
+  border-radius: 3px;
+  height:auto;
 }
 
-p {
-	margin: 0;
-	color: #919191;
+input, button, .date, .percent{
+	font-size: 2rem;
 }
 
 .inputForm {
@@ -75,23 +94,36 @@ p {
 }
 
 .inputForm > input {
-  margin: 1vw;
-  color: #AAAAAA;
-  text-align: center;
-  border-color: rgba(199, 199, 199, 0.66);
-	border-radius: 2vw;
-	padding: 1%;
-  height: 2rem;
-  width: 7rem;
+    margin: 0.5vw;
+    color: #AAAAAA;
+    text-align: center;
+    border-color: rgba(199, 199, 199, 0.66);
+    border-radius: 2vw;
+    padding: 1%;
+    height: 2rem;
+    width: 7rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
 }
 
 button {
-	border-color: rgba(145, 145, 145, 0.66);
-	border-radius: 2vw;
-  height: 3rem;
+    border-color: rgba(145, 145, 145, 0.66);
+    border-radius: 2vw;
+    height: 3rem;
+    color: #919191;
+    margin: 0.5vw;
 }
 
 #dischargeDay > p, #percentLeft > p, #salaryLeft > p{
-  font-size: 1.5rem;
-  font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
 }
