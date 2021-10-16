@@ -22,9 +22,9 @@ function calc(event) {
     let joinYear = Number($("#inputYear").val());
     let joinMonth = Number($("#inputMonth").val());
     let joinDay = Number($("#inputDay").val());
-    if (joinYear === "" || joinMonth === "" || joinDay === "") {
+    if (joinYear === "" || joinMonth === "" || joinDay === "" || joinMonth <= 0 || joinMonth >= 13 || joinDay <= 0 || joinDay >= 32) {
         alert("날짜를 정확히 선택해주세요.");
-    }
+    } //날짜가 invalid할 경우 alert
     //연도 월 일 각각 알려주기
     let joinDate = new Date(joinYear, joinMonth - 1, joinDay);
     //연, 월 계산
