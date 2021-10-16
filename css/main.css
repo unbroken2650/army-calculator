@@ -25,7 +25,12 @@ body {
 header{
   display: flex;
 }
-
+@media (max-width: 600px){
+    header{
+        display: block;
+        flex-wrap: wrap;
+    }
+}
 nav {
   text-align: center;
   display: flex;
