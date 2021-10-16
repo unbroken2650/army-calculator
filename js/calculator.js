@@ -1,4 +1,4 @@
-function groupSelected(data) {
+function groupSelected(group, month) {
     const result_1 = document.querySelector("#dischargeDay");
     const result_2 = document.querySelector("#percentLeft");
     const result_3 = document.querySelector("#salaryLeft");
@@ -8,7 +8,7 @@ function groupSelected(data) {
 
     document.querySelector(".subtitle").innerText = "입대(예정)일자를 입력해주세요 :)";
     const pShowGroup = document.querySelector("#showGroup");
-    pShowGroup.innerHTML = `<h3>복무개월 : <span id="armyMonth">${data}</span>개월</h3>`;
+    pShowGroup.innerHTML = `${group}의 복무 개월수 : <span id="armyMonth">${month}</span>개월`;
     pShowGroup.classList.remove("hidden");
 }
 function calc(event) {
@@ -103,7 +103,18 @@ function calc(event) {
     else { leftMonths = Math.floor((leftDays / 30) - 1); }
     result_3.innerHTML = `<p><b>월급 ${leftMonths}번</b>만 더 받으면 전역! 미리 축하드립니다 :)</p>`;
 
-    document.querySelector(".subtitle").innerText = "";
+    function fadeout() {
+        const subtitle = document.querySelector(".subtitle");
+        let opacity = 1;
+        const interval = window.setInterval(() => {
+            subtitle.style.opacity = opacity;
+            opacity -= 0.05;
+            if (opacity < -2) {
+                    subtitle.classList.add("hidden");
+                    clearInterval(interval)
+            }}, 10);
+    }
+    fadeout();
 }
 today();
 function today() {

@@ -17,14 +17,7 @@ main {
 
 main > h1, h2, div.inputForm, p{
   padding:0.5rem;
-  margin: 1vw;
-}
-
-.title {
-	margin: 3%;
-	width: 100%;
-	justify-content: center;
-	font-weight: 800;
+  margin: 0.5vw;
 }
 
 .titleText {
@@ -42,11 +35,14 @@ a {
 
 p {
     font-size: 1rem;
-	margin: 0;
+	margin: 0.5vw;
 	color: #919191;
 }
 
-h3, h4, h5, h6 {margin:1%;}
+h3, h4, h5, h6 {
+    margin:0.5vw;
+    color: #919191;
+}
 
 a:link,
 a:visited {
@@ -68,10 +64,11 @@ a:active {
 section#groupSelection {
     display: flex;
     flex-direction: column;
+    margin: 0.5vw;
 }
 section#groupSelection button{
   padding: 1px;
-  margin: 0.2%;
+  margin: 0.5%;
   
   font-size: 1.2rem;
   font-weight: 600;
@@ -81,6 +78,8 @@ section#groupSelection button{
   border-radius: 3px;
   height:auto;
 }
+
+form.groupForm {margin:0.5vw;}
 
 input, button, .date, .percent{
 	font-size: 2rem;
@@ -93,37 +92,86 @@ input, button, .date, .percent{
   align-items: center;
 }
 
+@media (max-width: 600px){
+    .inputForm {
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
 .inputForm > input {
     margin: 0.5vw;
     color: #AAAAAA;
     text-align: center;
     border-color: rgba(199, 199, 199, 0.66);
-    border-radius: 2vw;
+    border-radius: 10px;
     padding: 1%;
-    height: 2rem;
+    height: 30px;
     width: 7rem;
+}
+
+@media (max-width: 600px){
+    .inputForm > input {
+        margin: 0.5vw;
+        color: #AAAAAA;
+        text-align: center;
+        border-color: rgba(199, 199, 199, 0.66);
+        border-radius: 10px;
+        padding: 1%;
+        height: 30px;
+        width: 7rem;
+    }
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {  
 
-   opacity: 1;
+   opacity: 0.8;
 
 }
 
 button {
     border-color: rgba(145, 145, 145, 0.66);
-    border-radius: 2vw;
+    border-radius: 10px;
     height: 3rem;
     color: #919191;
     margin: 0.5vw;
 }
+
+@media (max-width: 600px){
+    .inputForm button {
+        color: #FFFFFF;
+        background-color: #919191;
+    }
+}
+
 
 #dischargeDay > p, #percentLeft > p, #salaryLeft > p{
     font-size: 1.5rem;
     font-weight: 300;
 }
 
+@media (max-width: 600px){
+    #dischargeDay > p, #percentLeft > p, #salaryLeft > p{
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}
+
+#warning {
+    text-align:center;
+    position:absolute;
+    bottom:0;
+    left:30%;
+    right:30%;
+}
+
 .hidden {
     display: none;
 }
+
+
+
+
+
