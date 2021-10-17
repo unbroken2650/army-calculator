@@ -1,0 +1,4 @@
+*.html linguist-detetable = true
+*.js linguist-detetable = false
+*.css inguist-detetable = false
+*.md linguist-detetable = false
