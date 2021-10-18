@@ -8,7 +8,9 @@
 	src: url('/fonts/NanumSquareEB.ttf');
 	font-weight: bold;
 }
-
+* {
+    font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
+}
 html {
 	background-color: #fefefe;
     font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
