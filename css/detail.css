@@ -1,11 +1,17 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@font-face {
+	font-family: 'NanumSquare';
+	src: url('/fonts/NanumSquareL.ttf');
+}
 
-* {
-	font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
+@font-face {
+	font-family: 'NanumSquare';
+	src: url('/fonts/NanumSquareEB.ttf');
+	font-weight: bold;
 }
 
 html {
 	background-color: #fefefe;
+    font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
 }
 
 main {
