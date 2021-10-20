@@ -109,7 +109,7 @@ input, button, .date, .percent{
 
 .inputForm > input {
     margin: 0.5vw;
-    color: #AAAAAA;
+    color: #818181;
     text-align: center;
     border-color: rgba(199, 199, 199, 0.66);
     border-radius: 10px;
@@ -118,24 +118,15 @@ input, button, .date, .percent{
     width: 7rem;
 }
 
-@media (max-width: 600px){
-    .inputForm > input {
-        margin: 0.5vw;
-        color: #AAAAAA;
-        text-align: center;
-        border-color: rgba(199, 199, 199, 0.66);
-        border-radius: 10px;
-        padding: 1%;
-        height: 30px;
-        width: 7rem;
-    }
-}
-
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {  
 
    opacity: 0.8;
 
+}
+
+::placeholder {
+    color: #d1d1d1;
 }
 
 button {
@@ -151,7 +142,7 @@ button {
         color: #FFFFFF;
         background-color: #919191;
     }
-}
+} //grey buttonin mobile
 
 
 #dischargeDay > p, #percentLeft > p, #salaryLeft > p{
@@ -181,8 +172,5 @@ button {
 .hidden {
     display: none;
 }
-
-
-
 
 

@@ -24,6 +24,7 @@ function calc(event) {
     let joinDay = Number($("#inputDay").val());
     if (joinYear === "" || joinMonth === "" || joinDay === "" || joinMonth <= 0 || joinMonth >= 13 || joinDay <= 0 || joinDay >= 32) {
         alert("날짜를 정확히 선택해주세요.");
+        return;
     } //날짜가 invalid할 경우 alert
     //연도 월 일 각각 알려주기
     let joinDate = new Date(joinYear, joinMonth - 1, joinDay);
@@ -100,7 +101,9 @@ function calc(event) {
     // result_3
     let leftMonths = Number();
     if (currentDate.getDate() < 10) { leftMonths = Math.floor(leftDays / 30); }
-    else { leftMonths = Math.floor((leftDays / 30) - 1); }
+    else { leftMonths = Math.floor(leftDays / 30)-1; }
+    if (leftPercent < 0) {leftMonths += 1;}
+    /*if leftMonths >= */
     result_3.innerHTML = `<p><b>월급 ${leftMonths}번</b>만 더 받으면 전역! 미리 축하드립니다 :)</p>`;
 
     function fadeout() {
