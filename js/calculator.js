@@ -99,12 +99,7 @@ function calc(event) {
     else { result_2.innerHTML = `<p>${currentDate.getFullYear()}년 ${Number(currentDate.getMonth() + 1)}월 ${currentDate.getDate()}일을 기준으로 <b>${leftPercent}</b>% 지났습니다.</p>`; }
 
     // result_3
-    let leftMonths = Number();
-    if (currentDate.getDate() < 10) { leftMonths = Math.floor(leftDays / 30); }
-    else { leftMonths = Math.floor(leftDays / 30)-1; }
-    if (leftPercent < 0) {leftMonths += 1;}
-    /*if leftMonths >= */
-    result_3.innerHTML = `<p><b>월급 ${leftMonths}번</b>만 더 받으면 전역! 미리 축하드립니다 :)</p>`;
+    result_3.innerHTML = `<p><b>월급 ${Math.floor(leftDays / 30)}번</b>만 더 받으면 전역! 미리 축하드립니다 :)</p>`;
 
     function fadeout() {
         const subtitle = document.querySelector(".subtitle");
