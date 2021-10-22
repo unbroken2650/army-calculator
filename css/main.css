@@ -78,3 +78,15 @@ a:active {
 	/*마우스 올리기, 클릭*/
 	color: #47E6A1;
 }
+
+footer {
+    bottom: 1%;
+    align-self: center;
+    position: absolute;
+}
+
+@media (max-width: 600px){
+    footer {
+        position: relative;
+    }
+}
