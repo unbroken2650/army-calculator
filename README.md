@@ -13,5 +13,5 @@
 앞으로의 계획 :
 휴가 계획표(?) 만들기
 
-###### current URL : [unbroken2650.github.io/army-calculator](https://unbroken2650.github.io/army-calculator) or [armycalc.kro.kr](https://www.armycalc.kro.kr) (custom FREE domain)
+###### current URL : https://github.com/unbroken2650/army-calculator/tree/completed
 
