@@ -3,63 +3,70 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-	<meta charset="UTF-8">
-	<title>Army Calculator 0.1</title>
-	<script src="jquery/jquery-1.12.4.js"></script>
-	<script src="jquery/jquery-ui.js"></script>
+    <meta charset="UTF-8">
+    <title>Army Calculator 0.1</title>
+    <script src="jquery/jquery-1.12.4.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/detail.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
 
 </head>
 
 <body>
     <header>
-    <h1 class="logo"><a href="index.html">army-calculator</a></h1>
-    <nav>
-        <a href="calculator.html">계산기</a>
-        <!--<a href="vacation.html">휴가 계산(개발 중)</a>-->
-    </nav>
+        <h1 class="logo"><a href="index.html">army-calculator</a></h1>
+        <nav>
+            <a href="calculator.html">계산기</a>
+            <!--<a href="vacation.html">휴가 계산(개발 중)</a>-->
+        </nav>
     </header>
     <main>
-    <h1 class="titleText">군인 계산기</h1>
-    <h2 class="subtitle">복무 형태를 선택 후, 입대(예정)일자를 입력해주세요 :)</h2>
-    <section id="groupSelection">
-        <!--육군 18 공군 21 해군 20 해병대 18 해양의무경찰 20 의무경찰 18 의무소방원 20 사회복무요원 21  -->
-        <form class="groupForm">
-            <button class="group18" type="button" onclick="groupSelected('육군', 18)" style="color:rgb(70, 193, 68);">육군</button>
-            <button class="group20" type="button" onclick="groupSelected('해군', 20)" style="color:rgb(64,162,191);">해군</button>
-            <button class="group21" type="button" onclick="groupSelected('공군', 21)" style="color:rgb(74, 66, 252);">공군</button>
-            <button class="group18" type="button" onclick="groupSelected('해병대', 18)" style="color:red;">해병대</button>
-            <button class="group20" type="button" onclick="groupSelected('사회복무요원', 20)" >사회복무요원</button>
-            <button class="group18" type="button" onclick="groupSelected('의무경찰', 18)" >의무경찰</button>
-            <button class="group20" type="button" onclick="groupSelected('의무소방원', 20)" >의무소방원</button>
-            <button class="group21" type="button" onclick="groupSelected('해양의무경찰', 21)" >해양의무경찰</button>
-        </form>
-        <h3 id="showGroup" class="hidden"></h3>
-    </section>
-    <div class="inputForm">
-        <h3><label for="inputYear">입대일 : </label></h3>
-        <input type="number" id='inputYear' class="date" min="2000" max="2100" value="2001" required>
-        <input type="number" id='inputMonth' class="date" min="01" max="12" value="01" required>
-        <input type="number" id='inputDay' class="date" min="01" max="31" value="16" required>
-        <button id="dayinputButton" onclick="calc()">GO</button>
-        <button id="dayResetButton" onclick="today();calc();">Today</button>
-    </div>
-    <div id="dischargeDay"> </div>
-    <div id="percentLeft"> </div>
-    <div id="salaryLeft"> </div>
+        <h1 class="titleText">군인 계산기</h1>
+        <h2 class="subtitle">복무 형태를 선택 후, 입대(예정)일자를 입력해주세요 :)</h2>
+        <section id="groupSelection">
+            <!--육군 18 공군 21 해군 20 해병대 18 해양의무경찰 20 의무경찰 18 의무소방원 20 사회복무요원 21  -->
+            <form class="groupForm">
+                <button class="group18" type="button" onclick="groupSelected('육군', 18)"
+                    style="color:rgb(70, 193, 68);">육군</button>
+                <button class="group20" type="button" onclick="groupSelected('해군', 20)"
+                    style="color:rgb(64,162,191);">해군</button>
+                <button class="group21" type="button" onclick="groupSelected('공군', 21)"
+                    style="color:rgb(74, 66, 252);">공군</button>
+                <button class="group18" type="button" onclick="groupSelected('해병대', 18)" style="color:red;">해병대</button>
+                <button class="group20" type="button" onclick="groupSelected('사회복무요원', 20)">사회복무요원</button>
+                <button class="group18" type="button" onclick="groupSelected('의무경찰', 18)">의무경찰</button>
+                <button class="group20" type="button" onclick="groupSelected('의무소방원', 20)">의무소방원</button>
+                <button class="group21" type="button" onclick="groupSelected('해양의무경찰', 21)">해양의무경찰</button>
+            </form>
+            <h3 id="showGroup" class="hidden"></h3>
+        </section>
+        <div class="inputForm">
+            <h3><label for="inputYear">입대일 : </label></h3>
+            <input type="number" id='inputYear' class="date" min="2000" max="2100" value="2001" required>
+            <input type="number" id='inputMonth' class="date" min="01" max="12" value="01" required>
+            <input type="number" id='inputDay' class="date" min="01" max="31" value="16" required>
+            <button id="dayinputButton" onclick="calc()">GO</button>
+            <button id="dayResetButton" onclick="today();calc();">Today</button>
+        </div>
+        <div id="dischargeDay"> </div>
+        <div id="percentLeft"> </div>
+        <div id="salaryLeft"> </div>
     </main>
-    <p id="warning">*계산결과는 오차가 있을 수 있으니 자세한 사항은 <a id="mma" href="https://www.mma.go.kr/index.do">병무청</a>에서 확인하시기 바랍니다.</p>
+    <p id="warning">*계산결과는 오차가 있을 수 있으니 자세한 사항은 <a id="mma" href="https://www.mma.go.kr/index.do">병무청</a>에서 확인하시기 바랍니다.
+    </p>
     <script src="js/main.js"></script>
     <script src="js/calculator.js"></script>
     <footer>
-		<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-F2m5tZx620MYUiNt" data-ad-width="320" data-ad-height="50"></ins>
-		<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async>
-		</script> <!--https://adfit.kakao.com/-->
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-F2m5tZx620MYUiNt" data-ad-width="320"
+            data-ad-height="50"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async>
+        </script>
+        <!--https://adfit.kakao.com/-->
     </footer>
 </body>
+
 </html>

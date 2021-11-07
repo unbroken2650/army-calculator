@@ -1,82 +1,82 @@
 @font-face {
-	font-family: 'NanumSquare';
-	src: url('/fonts/NanumSquareL.ttf');
+    font-family: "NanumSquare";
+    src: url("/fonts/NanumSquareL.ttf");
 }
 
 @font-face {
-	font-family: 'NanumSquare';
-	src: url('/fonts/NanumSquareEB.ttf');
-	font-weight: bold;
+    font-family: "NanumSquare";
+    src: url("/fonts/NanumSquareEB.ttf");
+    font-weight: bold;
 }
 * {
-    font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
+    font-family: "NanumSquare", Arial, Helvetica, sans-serif;
 }
 html {
-	background-color: #fefefe;
-    font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
+    background-color: #fefefe;
+    font-family: "NanumSquare", Arial, Helvetica, sans-serif;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-header{
-  display: flex;
+header {
+    display: flex;
 }
-@media (max-width: 600px){
-    header{
+@media (max-width: 600px) {
+    header {
         display: block;
         flex-wrap: wrap;
     }
 }
 nav {
-  text-align: center;
-  display: flex;
-  align-items: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 nav a {
-  margin: 2%;
-  padding: 2px;
-  border: 2px solid rgba(145, 145, 145, 0.4);
-  background-color: rgba(145, 145, 145, 0.05);
-  font-size: 20px;
-  white-space: nowrap;
+    margin: 2%;
+    padding: 2px;
+    border: 2px solid rgba(145, 145, 145, 0.4);
+    background-color: rgba(145, 145, 145, 0.05);
+    font-size: 20px;
+    white-space: nowrap;
 }
 
 .logo {
-	margin: 2%; 
-	width: auto;
-	justify-content: center;
-  align-items: center;
-	font-weight: 800;
-  left:1%;
-  top:1%;
+    margin: 2%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    left: 1%;
+    top: 1%;
 }
 
 .titleText {
-  font-size: 5vw;
-  font-weight: bold;
-  text-align: center;
-  color: #919191;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    color: #919191;
 }
 
 a {
-	text-decoration: none;
-	text-align: center;
-	display: inline;
+    text-decoration: none;
+    text-align: center;
+    display: inline;
 }
 
 a:link,
 a:visited {
-	/*누르기 전, 누른 후*/
-	color: #919191;
+    /*누르기 전, 누른 후*/
+    color: #919191;
 }
 
 a:hover,
 a:active {
-	/*마우스 올리기, 클릭*/
-	color: #47E6A1;
+    /*마우스 올리기, 클릭*/
+    color: #47e6a1;
 }
 
 footer {
@@ -85,7 +85,7 @@ footer {
     position: absolute;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     footer {
         position: relative;
     }
