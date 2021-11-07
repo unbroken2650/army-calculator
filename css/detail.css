@@ -1,105 +1,115 @@
 @font-face {
-	font-family: 'NanumSquare';
-	src: url('/fonts/NanumSquareL.ttf');
+    font-family: "NanumSquare";
+    src: url("/fonts/NanumSquareL.ttf");
 }
 
 @font-face {
-	font-family: 'NanumSquare';
-	src: url('/fonts/NanumSquareEB.ttf');
-	font-weight: bold;
+    font-family: "NanumSquare";
+    src: url("/fonts/NanumSquareEB.ttf");
+    font-weight: bold;
 }
 * {
-    font-family: 'NanumSquare', Arial, Helvetica, sans-serif;
+    font-family: "NanumSquare", Arial, Helvetica, sans-serif;
 }
 html {
-	background-color: #fefefe;
+    background-color: #fefefe;
 }
 
 main {
-  margin:3%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-main > h1, h2, div.inputForm, p{
-  padding:0.5rem;
-  margin: 0.5vw;
+main > h1,
+h2,
+div.inputForm,
+p {
+    padding: 0.5rem;
+    margin: 0.5vw;
 }
 
 .titleText {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #919191;
-  
+    font-size: 3rem;
+    font-weight: 800;
+    color: #919191;
 }
 
 a {
-	text-decoration: none;
-	text-align: center;
-	display: inline;
+    text-decoration: none;
+    text-align: center;
+    display: inline;
 }
 
 p {
     font-size: 1rem;
-	margin: 0.5vw;
-	color: #919191;
+    margin: 0.5vw;
+    color: #919191;
 }
 
-h3, h4, h5, h6 {
-    margin:0.5vw;
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.5vw;
     color: #919191;
 }
 
 a:link,
 a:visited {
-	/*누르기 전, 누른 후*/
-	color: #000;
+    /*누르기 전, 누른 후*/
+    color: #000;
 }
 
 a:hover,
 a:active {
-	/*마우스 올리기, 클릭*/
-	color: #47E6A1;
+    /*마우스 올리기, 클릭*/
+    color: #47e6a1;
 }
 
 .subtitle {
-	font-size: 2rem;
-	font-weight: 300;
-	color: #AEAEAE;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #aeaeae;
 }
 section#groupSelection {
     display: flex;
     flex-direction: column;
     margin: 0.5vw;
 }
-section#groupSelection button{
-  padding: 1px;
-  margin: 0.5%;
-  
-  font-size: 1.2rem;
-  font-weight: 600;
-  
-  outline: 2px rgba(145, 145, 145, 0.4);
-  background-color: rgba(145, 145, 145, 0.1);
-  border-radius: 3px;
-  height:auto;
+section#groupSelection button {
+    padding: 1px;
+    margin: 0.5%;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    outline: 2px rgba(145, 145, 145, 0.4);
+    background-color: rgba(145, 145, 145, 0.1);
+    border-radius: 3px;
+    height: auto;
 }
 
-form.groupForm {margin:0.5vw;}
+form.groupForm {
+    margin: 0.5vw;
+}
 
-input, button, .date, .percent{
-	font-size: 2rem;
+input,
+button,
+.date,
+.percent {
+    font-size: 2rem;
 }
 
 .inputForm {
-  display: flex;
-  flex-basis: auto;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-basis: auto;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     .inputForm {
         display: block;
         flex-direction: column;
@@ -118,11 +128,9 @@ input, button, .date, .percent{
     width: 7rem;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {  
-
-   opacity: 0.8;
-
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0.8;
 }
 
 ::placeholder {
@@ -137,40 +145,42 @@ button {
     margin: 0.5vw;
 }
 
-@media (max-width: 600px){
+/* grey button in mobile */
+@media (max-width: 600px) {
     .inputForm button {
-        color: #FFFFFF;
+        color: #ffffff;
         background-color: #919191;
     }
-} //grey buttonin mobile
+}
 
-
-#dischargeDay > p, #percentLeft > p, #salaryLeft > p{
+#dischargeDay > p,
+#percentLeft > p,
+#salaryLeft > p {
     font-size: 1.5rem;
     font-weight: 300;
 }
 
-@media (max-width: 600px){
-    #dischargeDay > p, #percentLeft > p, #salaryLeft > p{
+@media (max-width: 600px) {
+    #dischargeDay > p,
+    #percentLeft > p,
+    #salaryLeft > p {
         font-size: 1.3rem;
         font-weight: 300;
     }
 }
 
 #warning {
-    text-align:center;
-    position:relative;
-    bottom:0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
 }
-@media (max-width: 600px){
-    #warning, #mma{
+@media (max-width: 600px) {
+    #warning,
+    #mma {
         font-size: 0.8rem;
     }
-
 }
 
 .hidden {
     display: none;
 }
-
-
