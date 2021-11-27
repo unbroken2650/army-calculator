@@ -1,0 +1,16 @@
+{
+    "name": "armycalc",
+    "description": "website for Korean Army",
+    "keywords": [
+        "군인",
+        "육군",
+        "공군",
+        "해군",
+        "전역일 계산기",
+        "군대",
+        "armycalc"
+    ],
+    "author": "unbrokne2650",
+    "main": "index.html",
+    "version": "0.1.0"
+}
